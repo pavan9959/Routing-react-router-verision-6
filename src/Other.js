@@ -2,13 +2,13 @@ import React from "react";
 import { ReactDOM } from "react";
 import { Link, Route } from "react-router-dom";
 
-function App() {
+function Other() {
   return (
     <div>
-      <h1>app</h1>
-      <Link to="/other">Other</Link>
+      <h1>Other</h1>
+      <Link to="/">App</Link>
     </div>
   );
 }
 
-export default App;
+export default Other;
