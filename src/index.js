@@ -1,16 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Other from "./Other";
+import { BrowserRouter,Routes,Route, Link } from "react-router-dom";
+import { Provider } from "react-redux";
+import Store from "./Store";
+import Router from "./Router";
 
 import App from "./App";
 
+const state=Store()
+
 ReactDOM.render(
+  <Provider store={state}>
   <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />}></Route>
-      <Route path="/other" element={<Other />}></Route>
-    </Routes>
-  </BrowserRouter>,
+  <Link to="/Other" >Go to others or you can make navbar here</Link>
+    <Router/>
+  </BrowserRouter>
+  </Provider>,
   document.getElementById("root")
 );

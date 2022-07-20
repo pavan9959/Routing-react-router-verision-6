@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       <h1>app</h1>
-      <Link to="/other">Other</Link>
+      <Link to="/Other" >Other</Link>
     </div>
   );
 }
